@@ -1,0 +1,685 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'adelonregular';
+    src: url('adelonlregular.ttf');
+}
+@font-face {
+    font-family: 'monument';
+    src: url('MonumentExtended-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+/* Navbar */
+header {
+    position: absolute;
+    width: 100%;
+}
+header.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background-color: #ffffff;
+    z-index: 10;
+}
+header.active .nav-wrapper ul li a,
+header.active .logo,
+header.active .nav-wrapper .button {
+    color: #000;
+}
+header.active .nav-wrapper .button {
+    border-color: #000;
+}
+header.active .nav-wrapper {
+    height: 75px;
+}
+header .nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+    color: #fff;
+    font-family: 'monument';
+}
+header .nav-wrapper .logo {
+    transition: 400ms;
+    font-family: 'monument';
+}
+header .nav-wrapper .logo h2 {
+    font-size: clamp(30px, 2.5vw, 5rem);
+    position: relative;
+}
+header .nav-wrapper ul {
+    display: flex;
+    margin: 0px;
+}
+header .navMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+header .nav-wrapper ul li {
+    margin: 0px 15px;
+}
+header .nav-wrapper ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    position: relative;
+}
+header .nav-wrapper ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #f55a5a;
+    bottom: -5px;
+    left: 0px;
+    transition: 400ms;
+}
+header .nav-wrapper ul li a:hover::before {
+    width: 100%;
+} 
+header .nav-wrapper ul li a i {
+    display: none;
+}
+header .nav-wrapper .button {
+    text-decoration: none;
+    padding: 15px 45px;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    letter-spacing: 2.5px;
+    transition: 400ms;
+}
+header .nav-wrapper .button:hover {
+    background-color: #f55a5a;
+}
+header .nav-wrapper .bar {
+    height: 1.88px;
+    width: 34px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+header .nav-wrapper .bar:nth-child(2) {
+    margin: 8px 0px;
+    width: 18px;
+    margin-left: 15px;
+}
+header .nav-wrapper .hamburger {
+    display: none;
+}
+header .nav-wrapper .icons {
+    display: none;
+}
+header .nav-wrapper .icons a {
+    color: #ffffff;
+}
+/* Nav ends */
+
+
+
+
+
+section.contactMe {
+    height: 100%;
+    background-color: #000;
+    padding: 200px 0px 100px;
+    color: #efeeed;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Left-section */
+section.contactMe .contactInfoWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+section.contactMe .contactInfo>h1 {
+    margin-bottom: 50px;
+    font-size: clamp(20px, 1.4vw, 5rem);
+    font-family: 'monument';
+}
+section.contactMe .contactInfo .infoBox {
+    display: flex;
+    align-items: center;
+}
+section.contactMe .contactInfo .infoBox:nth-child(3) {
+    margin: 45px 0px;
+}
+section.contactMe .contactInfo .infoBox .icon {
+    margin-right: 30px;
+    background: linear-gradient(to right, rgb(245, 91, 91,0.2), rgba(61, 61, 61, 0.3));
+    border-radius: 5px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(25px, 1.7vw, 5rem);
+}
+section.contactMe .contactInfo .infoBox .info p {
+    line-height: 0.5;
+    color: #3c3c3c;
+    font-weight: 700;
+    letter-spacing: -.5px;
+}
+section.contactMe .contactInfo .infoBox .info span,
+section.contactMe .contactInfo .infoBox .info span a {
+    text-decoration: none;
+    font-size: clamp(15px, 1vw, 5rem);
+    line-height: 0;
+    color: #d0d0d0;
+}
+section.contactMe .contactInfo .infoBox .info span a:hover {
+    text-decoration: underline;
+}
+section.contactMe .contactInfo .socialInfo h1 {
+    margin: 70px 0px 30px;
+    font-size: clamp(20px, 1.4vw, 5rem);
+    font-family: 'monument';
+}
+section.contactMe .contactInfo .socialInfo .iconWrapper {
+    display: flex;
+    align-items: center;
+}
+section.contactMe .contactInfo .socialInfo .iconWrapper .iconBox {
+    margin-right: 30px;
+    border: 1px solid rgba(245, 91, 91, 0.3);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(25px, 1.7vw, 5rem);
+    transition: 200ms;
+}
+section.contactMe .contactInfo .socialInfo .iconWrapper a {
+    color: #d0d0d0;
+}
+section.contactMe .contactInfo .socialInfo .iconWrapper .iconBox:hover {
+    background: linear-gradient(to right, rgb(245, 91, 91,0.2), rgba(61, 61, 61, 0.3));
+    border: 0;
+}
+
+/* Right-section */
+section.contactMe h1.heading {
+    font-size: clamp(25px, 2.8vw, 5rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px #d1d7e0;
+    margin-bottom: 50px;
+    word-wrap: break-word;
+}
+section.contactMe h1>span {
+    display: block;
+    font-size: clamp(45px, 4.6vw, 5rem);
+    color: transparent;
+}
+section.contactMe form {
+    border-left: 5px solid #4d4d4d;
+    padding-left: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section.contactMe .inputBox {
+    margin-bottom: 40px;
+    position: relative;
+}
+section.contactMe label {
+    color: #efeeed;
+    display: block;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 10px;
+    left: 30px;
+    pointer-events: none;
+    letter-spacing: 1px;
+    transition: 200ms;
+    font-size: clamp(14px, 1.2vw, 1.01rem);
+}
+section.contactMe label.msg {
+    top: -50px;
+    transform: translateY(50px);
+}
+section.contactMe input, textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #3c3c3c;
+    outline: 0;
+    width: 100%;
+    color: #efeeed;
+    font-size: clamp(16px, 1.2vw, 2rem);
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 30px;
+}
+section.contactMe input {
+    height: 45px;
+}
+section.contactMe label::before {
+    position: absolute;
+    content: "";
+    left: -30px;
+    transform: rotate(-45deg);
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #f55a5a;
+    transition: 400ms;
+}
+section.contactMe input:focus~label::before {
+    transform: rotate(45deg);
+    top: 28px;
+    width: 19px;
+    height: 19px;
+}
+section.contactMe textarea:focus~label::before {
+    top: 28px;
+    width: 19px;
+    height: 19px;
+    transform: rotate(45deg);
+}
+section.contactMe textarea {
+    height: 100px;
+}
+section.contactMe button {
+    width: 100%;
+    height: 75px;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #efeeed;
+    border: 1px solid #f55a5a;
+    position: relative;
+    z-index: 0;
+}
+section.contactMe button::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    transition: 200ms;
+}
+section.contactMe button:hover::after {
+    background-color: #f55a5a;
+    height: 100%;
+}
+section.contactMe input:focus + label,
+section.contactMe input:valid + label {
+    transform: translateY(-25px);
+    color: #676767;
+    font-weight: 600;
+    font-size: clamp(11px, .8vw, 1rem);
+    letter-spacing: 0px;
+}
+section.contactMe input:focus {
+    border-color: #f55a5a;
+}
+section.contactMe textarea:focus {
+    border-color: #f55a5a;
+}
+section.contactMe textarea:focus + label,
+section.contactMe textarea:valid + label {
+    transform: translateY(28px);
+    color: #676767;
+    font-size: clamp(11px, .8vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+
+
+
+/* Footer Starts here */
+footer {
+    height: 100%;
+    background-color: #000;
+    color: #efeeed;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+footer .footerWrapper {
+    border-top: 0.5px solid #1e1e1e;
+    border-bottom: 0.5px solid #1e1e1e;
+    height: 100%;
+    padding: 100px 0px 90px;
+}
+footer .contactMe a {
+    color: #f55a5a;
+    text-decoration: none;
+    border-bottom: 1px solid #f55a5a;
+    transition: 200ms;
+    line-height: -10px;
+    font-size: clamp(14px, 0.9vw, 1.2rem);
+}
+footer .contactMe a:hover {
+    color: #efeeed;
+    border-bottom: 1px solid #efeeed;
+}
+footer .logo h1 {
+    position: relative;
+    font-size: clamp(27px, 2.7vw, 5rem);
+    font-family: 'adelonregular';
+    font-family: 'monument';
+}
+footer .logo h1::after {
+    position: absolute;
+    content: "";
+    top: 45%;
+    left: 33%;
+    background-color: #efeeed;
+    width: 0%;
+    height: 2px;
+    transition: 200ms;
+}
+footer .logo h1:hover::after {
+    width: 32.3%;
+}
+footer .socialIcons {
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+footer .socialIcons a {
+    color: #f55a5a;
+    transition: 200ms;
+}
+footer .socialIcons a:hover {
+    color: #efeeed;
+}
+footer .socialIcons span {
+    font-size: 23px;
+}
+footer .socialIcons span:not(.insta) {
+    margin-left: 35px;
+}
+footer .copyright {
+    height: 100%;
+    padding: 50px 0px 40px;
+    color: rgb(109, 109, 109);
+    font-size: clamp(13px, 2vw, 1rem);
+}
+/* Footer ends */
+
+
+
+
+
+@media(max-width: 1300px) {
+    /* Navbar */
+    header .navMenu {
+        width: 60%;
+    }
+    header .nav-wrapper button {
+        padding: 15px 35px;
+    }
+}
+
+
+
+@media(max-width: 1024px) {
+    header .nav-wrapper .hamburger {
+        display: block;
+    }
+    header .nav-wrapper {
+        justify-content: space-between;
+        padding: 0px;
+        height: 80px;
+    }
+    header .logo {
+        margin-top: 15px;
+    }
+    header .nav-wrapper .logo.active {
+        position: fixed;
+    }
+    header .nav-wrapper .logo, .hamburger {
+        padding: 0px 25px;
+        z-index: 10;
+    }
+    header .navMenu {
+        width: 100%;
+        height: 95vh;
+        display: block;
+        padding: 110px 10px;
+        background-color: #000;
+        opacity: 0;
+        position: fixed;
+        transform: translate(-100%, 43%);
+        text-align: center;
+        transition: 400ms;
+    }
+    header .navMenu.active {
+        transform: translate(0%, 43%);
+        opacity: 1;
+        z-index: 1;
+    }
+    header .nav-wrapper ul {
+        display: block;
+        padding: 0;
+        margin-top: 10px;
+    }
+    header .nav-wrapper ul li {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    header .nav-wrapper ul li a {
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+    header .nav-wrapper .button {
+        padding: 9px 25px;
+        font-size: 24px;
+        margin-left: 15px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    header .hamburger.active {
+        position: fixed;
+        right: 0px;
+    }
+    header .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    header .hamburger.active .bar:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+    header .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header .nav-wrapper .icons {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 25px;
+    }
+    header .nav-wrapper .icons span{
+        font-size: 25px;
+        margin: 0px 15px;
+    }
+    header .nav-wrapper .icons::before {
+        position: absolute;
+        top: -20px;
+        left: -10px;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #242424;
+    }
+    header .nav-wrapper ul li a i {
+        display: inline;
+    }
+
+    /* Contact Section */
+    section.contactMe {
+        padding: 150px 0px 100px;
+    }
+}
+
+
+
+@media(max-width: 768px) {
+    /* Contact Section */
+    section.contactMe .contactInfo {
+        padding-left: 70px;
+    }
+    section.contactMe .formWrapper {
+        margin-bottom: 90px;
+    }
+
+    /* Fooer */
+    footer .footerWrapper {
+        padding: 50px 0px;
+    }
+    footer .logo h1 {
+        margin: 40px 0px 50px;
+    }
+    footer .logo h1:hover::after {
+        width: 13%;
+        left: 43%;
+    }
+    footer .socialIcons span {
+        font-size: 19px;
+    }
+    footer .socialIcons span:not(.insta) {
+        margin-left: 22px;
+    }
+    footer .copyright {
+        padding: 35px 0px 25px;
+    }
+}
+@media(max-width: 576px) {
+    /* Navbar */
+    header .navMenu {
+        text-align: left;
+        padding-top: 130px;
+    }
+    header .nav-wrapper ul li {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    header .nav-wrapper ul li a {
+        font-size: 22px;
+        font-weight: 500;
+    }
+    header .nav-wrapper ul li.last {
+        margin-bottom: 40px;
+    }
+    header .nav-wrapper ul li a:hover::before {
+        width: 0;
+    }
+    header .nav-wrapper ul {
+        margin-bottom: 50px;
+    }
+    header .nav-wrapper .button {
+        width: 50%;
+        padding: 0px;
+        width: 100%;
+        margin-left: 15px;
+        margin-top: 30px;
+        border: 0;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    header .nav-wrapper .button:hover {
+        background-color: transparent;
+    }
+    header .nav-wrapper .button::before {
+        position: absolute;
+        top: -15px;
+        left: -25px;
+        content: "";
+        width: 100vw;
+        height: 2px;
+        background-color: #272727;
+    }
+    header .nav-wrapper .icons::before {
+        width: 0;
+    }
+    header .nav-wrapper .icons {
+        bottom: 28px;
+        padding-left: 10px;
+    }
+    header .nav-wrapper .icons span{
+        font-size: 23px;
+        margin: 0px 10px;
+    }
+    /* Nav ends */
+
+
+    /* Contact Section */
+    section.contactMe {
+        padding: 125px 0px 70px;
+    }
+    section.contactMe .contactInfo .infoBox .icon {
+        width: 70px;
+        height: 70px;
+    }
+    section.contactMe .contactInfo>h1 {
+        margin-bottom: 38px;
+        font-size: clamp(20px, 1.4vw, 5rem);
+    }
+    section.contactMe .contactInfo .infoBox:nth-child(3) {
+        margin: 35px 0px;
+    }
+    section.contactMe h1.heading {
+        margin-bottom: 38px;
+    }
+    section.contactMe .contactInfo {
+        padding-left: 0px;
+    }
+    section.contactMe .contactInfo .socialInfo .iconWrapper .iconBox {
+        margin-right: 0px auto;
+        width: 80px;
+        height: 80px;
+    }
+    section.contactMe form {
+        border-left: 0;
+        padding-left: 0px;
+    }
+    section.contactMe button {
+        width: 100%;
+        height: 55px;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+
+    /* Footer */
+    footer .logo h1:hover::after {
+        width: 0%;
+    }
+}
+
+
+@media(max-width: 400px) {
+    /* Navbar */
+    header .nav-wrapper .button::before {
+        top: -15px;
+        left: 0px;
+        width: 86vw;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    /* Loading Animation */
+    div.animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        background-color: #000;
+        color: #ffffff;
+        overflow: hidden;
+        z-index: 100;
+        will-change: transform;
+    }
+    h1.animate {
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #e0e0e0;
+        animation: animate 6s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    h1.animate span {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #f55a5a;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    div.contentWrapper {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .animation-complete .contentWrapper {
+        height: 100%;
+    }
+    /* Animation ends */
+    </style>
+</head>
+<body>
+
+    <!-- Loading Animation -->
+    <div class="animation">
+        <h1 class="animate">Loading<span>loading</span>loading<span>loading</span></h1>
+        <h1 class="animate">Loading<span>loading</span>loading<span>loading</span></h1>
+        <h1 class="animate">Loading<span>loading</span>loading<span>loading</span></h1>
+        <h1 class="animate">Loading<span>loading</span>loading<span>loading</span></h1>
+        <h1 class="animate">Loading<span>loading</span>loading<span>loading</span></h1>
+        <h1 class="animate">Loading<span>loading</span>loading<span>loading</span></h1>
+    </div>
+
+
+
+
+    <script>
+        let timeline = gsap.timeline();
+
+        timeline.to(".animate", {
+            delay: 3,
+            duration: 0,
+            opacity: 0,
+        });
+        timeline.to(".animation", {
+            delay: 1,
+            duration: 1,
+            y: "100%",
+            ease: "power4.out",
+            onStart: () => {
+                document.body.style.pointerEvents = "none";
+            },
+            onComplete: () => {
+                document.body.style.pointerEvents = "auto";
+                document.body.classList.add("animation-complete");
+            },
+        });
+
+        timeline.to(".animation", {
+            zIndex: -1,
+        });
+    </script>
+</body>
+</html>
